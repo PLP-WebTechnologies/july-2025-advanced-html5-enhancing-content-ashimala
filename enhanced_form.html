@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form </title>
+</head>
+<body>
+    <header>
+        <h1>Enhanced Web Form</h1>
+        <p>This page demonstrates the use of lists, tables, media, and a complete HTML5 form with validation as requested in the assignment.</p>
+    </header>
+
+    <section>
+        <h2>Lists Examples</h2>
+        
+        <h3>Unordered List (Features)</h3>
+        <ul>
+            <li>Responsive design</li>
+            <li>HTML5 validation</li>
+            <li>Accessible form elements</li>
+            <li>Semantic markup</li>
+        </ul>
+        
+        <h3>Ordered List (Steps)</h3>
+        <ol>
+            <li>Fill out the form</li>
+            <li>Submit your information</li>
+            <li>Wait for confirmation</li>
+            <li>Receive updates or feedback</li>
+        </ol>
+        
+        <h3>Description List (Terms)</h3>
+        <dl>
+            <dt>HTML5</dt>
+            <dd>The latest version of HyperText Markup Language</dd>
+            
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets for styling web pages</dd>
+            
+            <dt>Semantic HTML</dt>
+            <dd>HTML that introduces meaning to the web page rather than just presentation</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Table</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Features</th>
+                    <th>Price Per Month</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>Core features only</td>
+                    <td>Ksh.2500</td>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>Core + advanced features</td>
+                    <td>Ksh.5000</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>All features + priority support</td>
+                    <td>Ksh.7500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">All plans come with a 30-day money-back guarantee</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Media Examples For both MP3 and MP4</h2>
+        
+        <h3>Image</h3>
+        <figure>
+            <img src="https://via.placeholder.com/800x400" alt="Sample placeholder image" width="800">
+            <figcaption>Mt.Kilimanjaro</figcaption>
+        </figure>
+        
+        <h3>Video</h3>
+        <video controls width="800">
+            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="https://sample-videos.com/audio123/mp3/crowd-cheering.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Complete HTML5 Form</h2>
+        
+        <form id="registration-form" action="#" method="post" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="John Doe" autocomplete="name">
+                
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com" autocomplete="email">
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="07*-***-****" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required max="2025-01-01">
+                
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="120" readonly>
+                
+                <label for="website">Website</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="[a-zA-Z0-9]+" placeholder="4-20 characters, letters and numbers only">
+                
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters" autocomplete="new-password">
+                
+                <label for="confirm-password">Confirm Password *</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <p>Subscription Type</p>
+                <label><input type="radio" id="free" name="subscription" value="free" checked> Free</label><br>
+                <label><input type="radio" id="premium" name="subscription" value="premium"> Premium (Ksh.2500/month)</label>
+                
+                <p>Interests (Select all that apply)</p>
+                <label><input type="checkbox" id="tech" name="interests" value="tech"> Technology</label><br>
+                <label><input type="checkbox" id="sports" name="interests" value="sports"> Sports</label><br>
+                <label><input type="checkbox" id="music" name="interests" value="music"> Music</label>
+                
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="timezone">Timezone</label>
+                <select id="timezone" name="timezone" size="4">
+                    <option value="est">Eastern Standard Time (EST)</option>
+                    <option value="cst">Central Standard Time (CST)</option>
+                    <option value="mst">Mountain Standard Time (MST)</option>
+                    <option value="pst">Pacific Standard Time (PST)</option>
+                </select>
+                
+                <label for="bio">Biography</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                
+                <label for="avatar">Profile Picture</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <label for="color">Favorite Color</label>
+                <input type="color" id="color" name="color" value="#3498db">
+                
+                <label for="volume">Volume Preference (0-50)</label>
+                <input type="range" id="volume" name="volume" min="0" max="50" step="5" value="25">
+                
+                <label for="search">Search</label>
+                <input type="search" id="search" name="search" placeholder="Search...">
+                
+                <label><input type="checkbox" id="newsletter" name="newsletter" checked> Subscribe to newsletter</label>
+            </fieldset>
+            
+            <label><input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions *</label>
+            
+            <br><br>
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
+        <address>
+            Contact us at <a href="mailto:info@example.com">ashimalacasper@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>
